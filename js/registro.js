@@ -25,10 +25,14 @@ document.getElementById('formRegistroUsuario').addEventListener('submit', functi
 // Manejo de inicio sesión de anfitriones
 
 document.getElementById('formIngresoAnfitrion').addEventListener('submit', function(event) { 
+    let validacion = true;
     event.preventDefault(); // Evita que el formulario se envíe 
     let correo = document.getElementById('correoIngresoAnfitrion').value;
     let contrasena = document.getElementById('contrasenaIngresoAnfitrion').value;
     alert('correo: ' + correo + '\ncontrasena: ' + contrasena); 
+    if (validacion) {
+        window.location.href = 'single.html';
+    }
 } );
 
 // Manejo de inicio sesión de usuarios

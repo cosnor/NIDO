@@ -66,104 +66,85 @@
     </div>
     <!-- Navbar End -->
 
-
-    <!-- Header Start -->
-    <div class="container-fluid page-header">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Anfitrión</h3>
-                <div class="d-inline-flex text-white">
-                    <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Inicio</a></p>
-                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Anfitrión</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
-
-
-
-
     <!-- Blog Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="row">
-                <div class="col-lg mt-5 mt-lg-0">
-                    <!-- Author Bio -->
-                    <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
-                        <img src="img/user.png" class="img-fluid mx-auto mb-3" style="width: 100px;">
-                        <div id="infoAnfitrion">
-                            
-                        </div>
+                <div class="col-lg-8" >
+                    <div class="pb-3" id="pensionContent">
                     </div>
-                    <!-- Add Pensión -->
-                    <h4 class="text-uppercase mb-5" style="letter-spacing: 5px;">Agrega Una Pensión</h4>
-                    <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-0">
-                        <form id="formAgregarPension" class="px-4 py-0">
+                    <!-- Comment List Start -->
+                    <div class="bg-white" style="padding: 30px; margin-bottom: 30px;" id="commentSection">
+                    </div>
+    
+                    <!-- Comment Form Start -->
+                    <div class="bg-white mb-3" style="padding: 30px;">
+                        <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Deja un Comentario</h4>
+                        <form>
                             <div class="form-group">
-                                <input type="text" id="nombrePension" class="form-control p-4" placeholder="Nombre de la Pensión" required="required"  />
+                                <label for="name">Nombre *</label>
+                                <input type="text" class="form-control" id="name" required>
                             </div>
                             <div class="form-group">
-                                <input type="number" min="1" max="10" step="1" id="huespedesPension" class="form-control p-4" placeholder="Número de Huéspedes" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="number" min="100000" max="2000000" step="100000" id="precioPension" class="form-control p-4" placeholder="Precio" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <textarea id="descripcionPension" class="form-control p-4" placeholder="Descripción Pensión" required="required" rows="6"></textarea>                            </div>
-                            <div class="form-group">
-                                <select id= "ciudad" class="custom-select px-4" style="height: 47px;" required>
-                                    <option selected>Ciudad</option>
-                                    <option value="1">Bogotá</option>
-                                    <option value="2">Barranquilla</option>
-                                    <option value="3">Medellín</option>
-                                    <option value="4">Cali</option>
-                                    <option value="5">Santa Marta</option>
-                                    <option value="6">Medellín</option>
+                                <label for="Puntuación">Puntuación *</label>
+                                <select id= "Puntuación"class="custom-select px-4" style="height: 47px;" required>
+                                    <option value="1.0">1.0</option>
+                                    <option value="1.5">1.5</option>
+                                    <option value="2.0">2.0</option>
+                                    <option value="2.5">2.5</option>
+                                    <option value="3.0">3.0</option>
+                                    <option value="3.5">3.5</option>
+                                    <option value="4.0">4.0</option>
+                                    <option value="4.5">4.5</option>
+                                    <option selected="5.0">5.0</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="checklistServicios">
-                                    <strong> Servicios Pensión </strong> 
-                                </label> 
-                                <div id="checklistServicios"> 
-                                    <div class="form-check"> 
-                                        <input class="form-check-input" type="checkbox" id="servicioAlimentacion" value="Alimentacion"> 
-                                        <label class="form-check-label" for="servicioAlimentacion">Alimentación</label> 
-                                    </div> 
-                                    <div class="form-check"> 
-                                        <input class="form-check-input" type="checkbox" id="servicioLimpieza" value="Limpieza"> 
-                                        <label class="form-check-label" for="servicioLimpieza">Limpieza</label> 
-                                    </div> 
-                                    <div class="form-check"> <input class="form-check-input" type="checkbox" id="servicioLavado" value="Lavado"> 
-                                        <label class="form-check-label" for="servicioLavado">Lavado de Ropa</label> 
-                                    </div> 
-                                    <div class="form-check"> 
-                                        <input class="form-check-input" type="checkbox" id="servicioBuses" value="Buses"> 
-                                        <label class="form-check-label" for="servicioBuses">Ruta de Buses Cerca</label> 
-                                    </div> 
-                                </div>
+                                <label for="message">Comentario *</label>
+                                <textarea id="message" cols="30" rows="5" class="form-control" required></textarea>
                             </div>
-                            <div class="custom-file form-group mb-3"> 
-                                <label class="custom-file-label" for="fotosPension"> Fotos Pensión </label> 
-                                <input type="file" id="fotosPension" class="custom-file" accept="image/*" multiple required> 
-                            </div>
-                            
-                            
-                            <div>
-                                <button class="btn btn-primary btn-block py-3" type="submit">Subir</button>
+                            <div class="form-group mb-0">
+                                <input type="submit" value="Envía tu Comentario"
+                                    class="btn btn-primary font-weight-semi-bold py-2 px-3">
                             </div>
                         </form>
                     </div>
-                    <!-- Pensiones -->
-                    <div class="mb-5">
-                        <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Mis Pensiones</h4>
-                        <div id="misPensiones" class="">
-                            
+                    <!-- Comment Form End -->
+                </div>
+    
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <!-- Author Bio -->
+                    <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Conoce a tu Anfitrión</h4>
+                    <div class="d-flex flex-column text-center bg-white mb-5 py-5 px-4">
+                        <img src="img/user.png" class="img-fluid mx-auto mb-3" style="width: 100px;">
+                        <h3 class="text-primary mb-3">John Doe</h3>
+                        <p>Conset elitr erat vero dolor ipsum et diam, eos dolor lorem, ipsum sit no ut est  ipsum erat kasd amet elitr</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="text-primary px-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="text-primary px-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="text-primary px-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="text-primary px-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="text-primary px-2" href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
                         </div>
-                        
-                        
+                    </div>
+                    
+    
+                    <!-- Servicios -->
+                    <div class="mb-5">
+                        <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Servicios de la Pensión</h4>
+                        <div class="d-flex flex-wrap m-n1" id="serviciosPension">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -263,7 +244,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/anfitiones.js"></script>
+    <script src="js/pension.js"></script>
 </body>
 
 </html>

@@ -136,14 +136,32 @@
                     </div>
     
                     <!-- Tag Cloud -->
-                    <div class="mb-5">
+                    <div class="mb-5 bg-white p-4">
                         <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Filtros</h4>
-                        <div class="d-flex flex-wrap m-n1">
-                            <a href="" class="btn btn-light m-1">Alimentación</a>
-                            <a href="" class="btn btn-light m-1">Aseo</a>
-                            <a href="" class="btn btn-light m-1">Servicio de Buses Cerca</a>
-                            <a href="" class="btn btn-light m-1">Lavado de Ropa</a>
-                        </div>
+                        <form id="formFilters">
+                            <div class="form-group ">
+                                <label for="checklistServicios">
+                                    <strong style="color: var(--primary);"> Servicios Pensión </strong> 
+                                </label> 
+                                <div id="checklistServicios" class="d-flex flex-column "> 
+                                    <div class="form-check m-2" > 
+                                        <input class="form-check-input" type="checkbox" id="servicioAlimentacion" value="Alimentacion"> 
+                                        <label class="form-check-label" for="servicioAlimentacion">Alimentación</label> 
+                                    </div> 
+                                    <div class="form-check m-2"> 
+                                        <input class="form-check-input" type="checkbox" id="servicioLimpieza" value="Limpieza"> 
+                                        <label class="form-check-label" for="servicioLimpieza">Limpieza</label> 
+                                    </div> 
+                                    <div class="form-check m-2"> <input class="form-check-input" type="checkbox" id="servicioLavado" value="Lavado"> 
+                                        <label class="form-check-label" for="servicioLavado">Lavado de Ropa</label> 
+                                    </div> 
+                                    <div class="form-check m-2"> 
+                                        <input class="form-check-input" type="checkbox" id="servicioBuses" value="Buses"> 
+                                        <label class="form-check-label" for="servicioBuses">Ruta de Buses Cerca</label> 
+                                    </div> 
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-8">
